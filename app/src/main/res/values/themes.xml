@@ -13,4 +13,15 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <!-- 여기서 Splash화면에 적용될 Theme을 설정한다.-->
+    <style name="SpalshTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- 아래 속성은 Splash에 사용될 배경화면을 지정하게 된다. -->
+        <item name="android:windowBackground">@drawable/ic_launcher_foreground</item>
+        <!-- 아래 속성은 Splash의 상태바 색상을 변경해야 할 경우 사용하게 된다. -->
+        <item name="android:statusBarColor">@color/white</item>
+        <!-- 아래 속성은 Splash의 상태바 색상이 밝은 색일 경우, 상태바의 디폴트 아이템들 (시계, 배터리 잔량 등) 이 묻혀 잘 보이지 않을 때 사용한다.
+        해당 아이템들의 색상을 짙은 색으로 변경해준다.-->
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
 </resources>
