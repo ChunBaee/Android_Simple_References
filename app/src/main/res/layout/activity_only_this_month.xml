@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/only_this_month_tv_year_and_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This Year / Month"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/only_this_month_rv_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="10dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/only_this_month_tv_year_and_month"
+        app:layout_constraintVertical_bias="0"
+        app:spanCount="7"
+        tools:itemCount="31"
+        tools:listitem="@layout/item_calendar_day"
+        />
+    <!-- tools 태그의 속성들은 프리뷰에서만 보여질 뿐 실제 결과물에는 영향을 끼치지 않는다. -->
+    <!-- Vertical_bias를 0으로 주는 이유는, height를 wrap_content로 주게 되면 RV가 높이가 모자랄 때
+    중간으로 가버리므로 이를 방지하기 위해 최상단으로 끌어올리기 위함이다. -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
